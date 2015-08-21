@@ -36,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		583AC1991B87236D00BE44B6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		585B5297194588F2000938B8 /* MyAppWriteWithSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAppWriteWithSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		585B529B194588F3000938B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		585B529C194588F3000938B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +93,6 @@
 		585B5299194588F2000938B8 /* MyAppWriteWithSwift */ = {
 			isa = PBXGroup;
 			children = (
-				583AC1991B87236D00BE44B6 /* README.md */,
 				58CF281B194A922000C028D3 /* AppDelegate */,
 				58CF281C194A923800C028D3 /* Controllers */,
 				58CF281A194A920B00C028D3 /* Classes */,
