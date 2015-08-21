@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MainViewController" customModule="MyAppWriteWithSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPb-zf-iLe">
+                                <rect key="frame" x="20" y="289" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="H3m-7M-QLk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1764705882" green="0.6705882353" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTM-Dv-mHg">
+                                <rect key="frame" x="20" y="330" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="29A-N7-TIC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="bsh-HM-nty"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Swift Programming Language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8q6-GK-0tm">
+                                <rect key="frame" x="20" y="99" width="560" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.94509803920000002" green="0.61960784310000006" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OTM-Dv-mHg" firstAttribute="top" secondItem="NPb-zf-iLe" secondAttribute="bottom" constant="20" id="1fH-Qa-MdZ"/>
+                            <constraint firstItem="OTM-Dv-mHg" firstAttribute="trailing" secondItem="NPb-zf-iLe" secondAttribute="trailing" id="2Ne-hZ-HUg"/>
+                            <constraint firstAttribute="centerX" secondItem="NPb-zf-iLe" secondAttribute="centerX" id="Lih-Ha-wbA"/>
+                            <constraint firstItem="8q6-GK-0tm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="79" id="bFc-qY-ily"/>
+                            <constraint firstItem="NPb-zf-iLe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="hB1-i2-uJN"/>
+                            <constraint firstAttribute="trailing" secondItem="8q6-GK-0tm" secondAttribute="trailing" constant="20" id="ssh-XF-b2p"/>
+                            <constraint firstAttribute="centerY" secondItem="NPb-zf-iLe" secondAttribute="centerY" constant="0.5" id="ugY-0E-bpr"/>
+                            <constraint firstItem="8q6-GK-0tm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="uxC-73-T71"/>
+                            <constraint firstAttribute="trailing" secondItem="NPb-zf-iLe" secondAttribute="trailing" constant="20" id="vUe-Tl-0Ph"/>
+                            <constraint firstItem="OTM-Dv-mHg" firstAttribute="leading" secondItem="NPb-zf-iLe" secondAttribute="leading" id="zg0-Vj-71A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="OTM-Dv-mHg" id="umT-dD-AQ7"/>
+                        <outlet property="textLabel" destination="NPb-zf-iLe" id="wFl-dw-lu0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
