@@ -57,7 +57,7 @@ class MyAppWriteWithSwiftTests: XCTestCase {
         
         var country = Country(name: "Canada", captitalName: "Ottawa")
         
-        println("\(country.name)'capital city is called \(country.capitalCity.name)")
+        print("\(country.name)'capital city is called \(country.capitalCity.name)")
         
         XCTAssertTrue(true, "Pass")
     }
@@ -65,7 +65,7 @@ class MyAppWriteWithSwiftTests: XCTestCase {
     func testShowStrongReferenceCyclesForClosures() {
         var paragraph: HTMLElement_StrongReferenceVersion? = HTMLElement_StrongReferenceVersion(name: "p", text: "testShowStrongReferenceCyclesForClosures")
         
-        println(paragraph?.asHTML())
+        print(paragraph?.asHTML())
         
         paragraph = nil
         
@@ -75,7 +75,7 @@ class MyAppWriteWithSwiftTests: XCTestCase {
     func testResolvingStrongReferenceCyclesForClosures() {
         var paragraph: HTMLElement? = HTMLElement(name: "p", text: "testResolvingStrongReferenceCyclesForClosures")
         
-        println(paragraph?.asHTML())
+        print(paragraph?.asHTML())
         
         paragraph = nil
         
@@ -91,7 +91,7 @@ class MyAppWriteWithSwiftTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measure() {
             // Put the code you want to measure the time of here.
         }
     }

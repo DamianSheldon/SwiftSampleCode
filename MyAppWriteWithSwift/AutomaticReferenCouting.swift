@@ -18,12 +18,12 @@ class Person {
         
         self.name = name
         
-        println("\(name) is being initialized.")
+        print("\(name) is being initialized.")
     }
     
     deinit {
         
-        println("\(name) is being deInitialized.")
+        print("\(name) is being deInitialized.")
     }
     
 }
@@ -42,7 +42,7 @@ class Customer {
     
     deinit {
         
-        println("\(name) is being deInitialized.")
+        print("\(name) is being deInitialized.")
     }
 }
 
@@ -62,7 +62,7 @@ class CreditCard {
     
     deinit {
         
-        println("Card #\(number) is being deInitialized.")
+        print("Card #\(number) is being deInitialized.")
         
     }
 }
@@ -127,7 +127,7 @@ class HTMLElement {
     
     deinit {
         
-        println("HTMLElement \(name) is being deinitialized.")
+        print("HTMLElement \(name) is being deinitialized.")
         
     }
 }
@@ -161,7 +161,7 @@ class HTMLElement_StrongReferenceVersion {
     
     deinit {
         
-        println("HTMLElement_StrongReferenceVersion \(name) is being deinitialized.")
+        print("HTMLElement_StrongReferenceVersion \(name) is being deinitialized.")
         
     }
 }

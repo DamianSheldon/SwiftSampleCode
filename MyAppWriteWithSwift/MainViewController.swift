@@ -15,40 +15,40 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     
     // MARK: Responding to the view events
-    override func viewDidAppear(animated: Bool)
+    override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
         
         // observe keyboard hide and show notifications to resize the text view appropriately
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: Selector("keyboardWillShow:"),
-            name: UIKeyboardWillShowNotification,
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(MainViewController.keyboardWillShow(_:)),
+            name: NSNotification.Name.UIKeyboardWillShow,
             object:nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: Selector("keyboardWillHide:"),
-            name:UIKeyboardWillHideNotification,
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(MainViewController.keyboardWillHide(_:)),
+            name:NSNotification.Name.UIKeyboardWillHide,
             object:nil)
     }
     
-    override func viewDidDisappear(animated: Bool)
+    override func viewDidDisappear(_ animated: Bool)
     {
         super.viewDidDisappear(animated)
         
-        NSNotificationCenter.defaultCenter().removeObserver(self,
-            name: UIKeyboardWillShowNotification,
+        NotificationCenter.default.removeObserver(self,
+            name: NSNotification.Name.UIKeyboardWillShow,
             object: nil)
         
-        NSNotificationCenter.defaultCenter().removeObserver(self,
-            name: UIKeyboardWillHideNotification,
+        NotificationCenter.default.removeObserver(self,
+            name: NSNotification.Name.UIKeyboardWillHide,
             object: nil)
 
     }
     
     // MARK: UITextFieldDelegate
-    func textFieldShouldReturn(textField: UITextField) -> Bool
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        if !textField.text.isEmpty {
+        if !(textField.text?.isEmpty)! {
             self.textLabel.text = textField.text
         }
         
@@ -58,35 +58,35 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: Handle keyboard notification
-    @objc func keyboardWillShow(notification: NSNotification)
+    @objc func keyboardWillShow(_ notification: Notification)
     {
         /*
         Reduce the size of the text view so that it's not obscured by the keyboard.
         Animate the resize so that it's in sync with the appearance of the keyboard.
         */
-        adjustViewByKeyboardState(true, keyboardInfo: notification.userInfo!)
+        adjustViewByKeyboardState(true, keyboardInfo: (notification as NSNotification).userInfo! as AnyObject?)
     }
     
-    @objc func keyboardWillHide(notification: NSNotification)
+    @objc func keyboardWillHide(_ notification: Notification)
     {
         /*
         Restore the size of the text view (fill self's view).
         Animate the resize so that it's in sync with the disappearance of the keyboard.
         */
-        adjustViewByKeyboardState(false, keyboardInfo: notification.userInfo!)
+        adjustViewByKeyboardState(false, keyboardInfo: (notification as NSNotification).userInfo! as AnyObject?)
     }
     
     // MARK: Uilities
-    func adjustViewByKeyboardState(state: Bool, keyboardInfo: AnyObject?)
+    func adjustViewByKeyboardState(_ state: Bool, keyboardInfo: AnyObject?)
     {
         
         if state { // Show keyboard
         
             let info = keyboardInfo as! NSDictionary
-            let keyboardFrameVal = info.objectForKey(UIKeyboardFrameEndUserInfoKey) as! NSValue
-            let keyboardFrame = keyboardFrameVal.CGRectValue()
+            let keyboardFrameVal = info.object(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue
+            let keyboardFrame = keyboardFrameVal.cgRectValue
             
-            let distanceBetweenTextFieldAndScreenBottom = CGRectGetHeight(UIScreen.mainScreen().bounds) - (CGRectGetMaxY(self.textField.frame) - CGRectGetMinY(self.view.frame))
+            let distanceBetweenTextFieldAndScreenBottom = UIScreen.main.bounds.height - (self.textField.frame.maxY - self.view.frame.minY)
             let yOffset = keyboardFrame.height - distanceBetweenTextFieldAndScreenBottom
 
             

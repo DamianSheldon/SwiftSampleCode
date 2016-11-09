@@ -22,12 +22,12 @@ class StringAndCharacters: NSObject {
         
         let sparklingHeart = "\u{1F496}"
         
-        println("\(wiseWords)")
+        print("\(wiseWords)")
         
-        println("\(dollarSign)")
+        print("\(dollarSign)")
         
-        println("\(blackHeart)")
+        print("\(blackHeart)")
         
-        println("\(sparklingHeart)")
+        print("\(sparklingHeart)")
     }
 }

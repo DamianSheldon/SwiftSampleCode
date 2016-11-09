@@ -59,7 +59,7 @@ class Residence {
     }
     
     func printNumberOfRooms() {
-        println("The number of rooms is \(numberOfRooms)")
+        print("The number of rooms is \(numberOfRooms)")
     }
     
     var address: Address?
