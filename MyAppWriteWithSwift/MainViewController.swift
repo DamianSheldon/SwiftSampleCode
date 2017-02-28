@@ -14,6 +14,32 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     
+    let syncQueue = DispatchQueue(label: "com.tenneshop.syncQueue")
+    let dateformatter = DateFormatter()
+    
+    var queueSuspendCounter = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .white
+        
+        view.addSubview(resumeButton)
+        configureConstraintsForResumeButton()
+        
+        dateformatter.dateFormat = "yyyy'-'MM'-'dd hh:mm:ss"
+        
+        syncQueue.suspend()
+        
+        queueSuspendCounter += 1
+        
+        syncQueue.async { [unowned self] in
+            let dateString = self.dateformatter.string(from: Date())
+            
+            print("\(#file)> \(#function)> \(#line) execute time:\(dateString)")
+        }
+    }
+    
     // MARK: Responding to the view events
     override func viewDidAppear(_ animated: Bool)
     {
@@ -43,6 +69,15 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             name: NSNotification.Name.UIKeyboardWillHide,
             object: nil)
 
+    }
+    
+    // MARK: Event Responder
+    @objc func respondsToResumeButton() {
+        if queueSuspendCounter > 0 {
+            queueSuspendCounter -= 1
+            
+            syncQueue.resume()
+        }
     }
     
     // MARK: UITextFieldDelegate
@@ -103,4 +138,21 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // MARK: Private Method
+    func configureConstraintsForResumeButton() {
+        view.addConstraint(NSLayoutConstraint(item: resumeButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: resumeButton, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 0.5, constant: 0))
+    }
+    
+    // MARK: Getter
+    lazy var resumeButton: UIButton = {
+        
+        let resumeButton = UIButton(type: .custom)
+        resumeButton.translatesAutoresizingMaskIntoConstraints = false
+        resumeButton.setTitle("Resume", for: .normal)
+        resumeButton.setTitleColor(.black, for: .normal)
+        resumeButton.addTarget(self, action: #selector(respondsToResumeButton), for: .touchUpInside)
+        
+        return resumeButton
+    }()
 }
