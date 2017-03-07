@@ -12,6 +12,7 @@
 		585B52A2194588F3000938B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585B52A0194588F3000938B8 /* Main.storyboard */; };
 		585B52A4194588F3000938B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 585B52A3194588F3000938B8 /* Images.xcassets */; };
 		585B52B0194588F3000938B8 /* AutomaticReferenCoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585B52AF194588F3000938B8 /* AutomaticReferenCoutingTests.swift */; };
+		58A1D32B1E6EB23B00017A3D /* FilePrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1D32A1E6EB23B00017A3D /* FilePrivate.swift */; };
 		58CF2815194A82C600C028D3 /* AutomaticReferenCouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CF2814194A82C600C028D3 /* AutomaticReferenCouting.swift */; };
 		58CF2824194ACC9A00C028D3 /* OptionalChaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CF2823194ACC9900C028D3 /* OptionalChaining.swift */; };
 		58CF282A194ADEF300C028D3 /* TypeCasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CF2829194ADEF300C028D3 /* TypeCasting.swift */; };
@@ -44,6 +45,7 @@
 		585B52A9194588F3000938B8 /* MyAppWriteWithSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppWriteWithSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		585B52AE194588F3000938B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		585B52AF194588F3000938B8 /* AutomaticReferenCoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticReferenCoutingTests.swift; sourceTree = "<group>"; };
+		58A1D32A1E6EB23B00017A3D /* FilePrivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilePrivate.swift; sourceTree = "<group>"; };
 		58CF2814194A82C600C028D3 /* AutomaticReferenCouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomaticReferenCouting.swift; sourceTree = "<group>"; };
 		58CF2823194ACC9900C028D3 /* OptionalChaining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalChaining.swift; sourceTree = "<group>"; };
 		58CF2829194ADEF300C028D3 /* TypeCasting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCasting.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				58CF282F194AE95300C028D3 /* NestedTypes.swift */,
 				58CF2831194AF53500C028D3 /* Initializer.swift */,
 				58FFDF6D1A2B218A00369C56 /* StringsAndCharacters.swift */,
+				58A1D32A1E6EB23B00017A3D /* FilePrivate.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				58CF282A194ADEF300C028D3 /* TypeCasting.swift in Sources */,
 				585B529D194588F3000938B8 /* AppDelegate.swift in Sources */,
 				58CF2824194ACC9A00C028D3 /* OptionalChaining.swift in Sources */,
+				58A1D32B1E6EB23B00017A3D /* FilePrivate.swift in Sources */,
 				58CF2832194AF53500C028D3 /* Initializer.swift in Sources */,
 				58FFDF6E1A2B218A00369C56 /* StringsAndCharacters.swift in Sources */,
 				58FFDF761A2B57AA00369C56 /* MainViewController.swift in Sources */,
