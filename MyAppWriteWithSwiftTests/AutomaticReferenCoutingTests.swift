@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import MyAppWriteWithSwift
 
 class MyAppWriteWithSwiftTests: XCTestCase {
     
