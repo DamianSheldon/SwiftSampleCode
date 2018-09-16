@@ -76,8 +76,8 @@ class MyAppWriteWithSwiftTests: XCTestCase {
     func testResolvingStrongReferenceCyclesForClosures() {
         var paragraph: HTMLElement? = HTMLElement(name: "p", text: "testResolvingStrongReferenceCyclesForClosures")
         
-        print(paragraph?.asHTML())
-        
+        print(paragraph?.asHTML() ?? "paragraph inner HTML's content absense")
+
         paragraph = nil
         
         XCTAssertTrue(true, "Pass")
