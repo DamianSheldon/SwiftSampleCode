@@ -56,7 +56,7 @@ class MyAppWriteWithSwiftTests: XCTestCase {
     
     func testUnownedReferenceAndImplicityUnwrappedOptional() {
         
-        var country = Country(name: "Canada", captitalName: "Ottawa")
+        let country = Country(name: "Canada", captitalName: "Ottawa")
         
         print("\(country.name)'capital city is called \(country.capitalCity.name)")
         
