@@ -66,7 +66,7 @@ class MyAppWriteWithSwiftTests: XCTestCase {
     func testShowStrongReferenceCyclesForClosures() {
         var paragraph: HTMLElement_StrongReferenceVersion? = HTMLElement_StrongReferenceVersion(name: "p", text: "testShowStrongReferenceCyclesForClosures")
         
-        print(paragraph?.asHTML())
+        print(paragraph?.asHTML() ?? "paragraph inner HTML's content absense")
         
         paragraph = nil
         
