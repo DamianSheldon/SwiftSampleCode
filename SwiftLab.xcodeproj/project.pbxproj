@@ -37,12 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		585B5297194588F2000938B8 /* MyAppWriteWithSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAppWriteWithSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		585B5297194588F2000938B8 /* SwiftLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		585B529B194588F3000938B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		585B529C194588F3000938B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		585B52A1194588F3000938B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		585B52A3194588F3000938B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		585B52A9194588F3000938B8 /* MyAppWriteWithSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppWriteWithSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		585B52A9194588F3000938B8 /* SwiftLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		585B52AE194588F3000938B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		585B52AF194588F3000938B8 /* AutomaticReferenCoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticReferenCoutingTests.swift; sourceTree = "<group>"; };
 		58A1D32A1E6EB23B00017A3D /* FilePrivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilePrivate.swift; sourceTree = "<group>"; };
@@ -77,8 +77,8 @@
 		585B528E194588F1000938B8 = {
 			isa = PBXGroup;
 			children = (
-				585B5299194588F2000938B8 /* MyAppWriteWithSwift */,
-				585B52AC194588F3000938B8 /* MyAppWriteWithSwiftTests */,
+				585B5299194588F2000938B8 /* SwiftLab */,
+				585B52AC194588F3000938B8 /* SwiftLabTests */,
 				585B5298194588F2000938B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,13 +86,13 @@
 		585B5298194588F2000938B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				585B5297194588F2000938B8 /* MyAppWriteWithSwift.app */,
-				585B52A9194588F3000938B8 /* MyAppWriteWithSwiftTests.xctest */,
+				585B5297194588F2000938B8 /* SwiftLab.app */,
+				585B52A9194588F3000938B8 /* SwiftLabTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		585B5299194588F2000938B8 /* MyAppWriteWithSwift */ = {
+		585B5299194588F2000938B8 /* SwiftLab */ = {
 			isa = PBXGroup;
 			children = (
 				58CF281B194A922000C028D3 /* AppDelegate */,
@@ -101,7 +101,7 @@
 				585B52A3194588F3000938B8 /* Images.xcassets */,
 				585B529A194588F3000938B8 /* Supporting Files */,
 			);
-			path = MyAppWriteWithSwift;
+			path = SwiftLab;
 			sourceTree = "<group>";
 		};
 		585B529A194588F3000938B8 /* Supporting Files */ = {
@@ -112,14 +112,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		585B52AC194588F3000938B8 /* MyAppWriteWithSwiftTests */ = {
+		585B52AC194588F3000938B8 /* SwiftLabTests */ = {
 			isa = PBXGroup;
 			children = (
 				585B52AF194588F3000938B8 /* AutomaticReferenCoutingTests.swift */,
 				58EEFCD51B860FFE00C34AD9 /* TypeCastingTests.swift */,
 				585B52AD194588F3000938B8 /* Supporting Files */,
 			);
-			path = MyAppWriteWithSwiftTests;
+			path = SwiftLabTests;
 			sourceTree = "<group>";
 		};
 		585B52AD194588F3000938B8 /* Supporting Files */ = {
@@ -164,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		585B5296194588F2000938B8 /* MyAppWriteWithSwift */ = {
+		585B5296194588F2000938B8 /* SwiftLab */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 585B52B3194588F3000938B8 /* Build configuration list for PBXNativeTarget "MyAppWriteWithSwift" */;
+			buildConfigurationList = 585B52B3194588F3000938B8 /* Build configuration list for PBXNativeTarget "SwiftLab" */;
 			buildPhases = (
 				585B5293194588F2000938B8 /* Sources */,
 				585B5294194588F2000938B8 /* Frameworks */,
@@ -176,14 +176,14 @@
 			);
 			dependencies = (
 			);
-			name = MyAppWriteWithSwift;
+			name = SwiftLab;
 			productName = MyAppWriteWithSwift;
-			productReference = 585B5297194588F2000938B8 /* MyAppWriteWithSwift.app */;
+			productReference = 585B5297194588F2000938B8 /* SwiftLab.app */;
 			productType = "com.apple.product-type.application";
 		};
-		585B52A8194588F3000938B8 /* MyAppWriteWithSwiftTests */ = {
+		585B52A8194588F3000938B8 /* SwiftLabTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 585B52B6194588F3000938B8 /* Build configuration list for PBXNativeTarget "MyAppWriteWithSwiftTests" */;
+			buildConfigurationList = 585B52B6194588F3000938B8 /* Build configuration list for PBXNativeTarget "SwiftLabTests" */;
 			buildPhases = (
 				585B52A5194588F3000938B8 /* Sources */,
 				585B52A6194588F3000938B8 /* Frameworks */,
@@ -194,9 +194,9 @@
 			dependencies = (
 				585B52AB194588F3000938B8 /* PBXTargetDependency */,
 			);
-			name = MyAppWriteWithSwiftTests;
+			name = SwiftLabTests;
 			productName = MyAppWriteWithSwiftTests;
-			productReference = 585B52A9194588F3000938B8 /* MyAppWriteWithSwiftTests.xctest */;
+			productReference = 585B52A9194588F3000938B8 /* SwiftLabTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 585B5292194588F2000938B8 /* Build configuration list for PBXProject "MyAppWriteWithSwift" */;
+			buildConfigurationList = 585B5292194588F2000938B8 /* Build configuration list for PBXProject "SwiftLab" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,8 +232,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				585B5296194588F2000938B8 /* MyAppWriteWithSwift */,
-				585B52A8194588F3000938B8 /* MyAppWriteWithSwiftTests */,
+				585B5296194588F2000938B8 /* SwiftLab */,
+				585B52A8194588F3000938B8 /* SwiftLabTests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +292,7 @@
 /* Begin PBXTargetDependency section */
 		585B52AB194588F3000938B8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 585B5296194588F2000938B8 /* MyAppWriteWithSwift */;
+			target = 585B5296194588F2000938B8 /* SwiftLab */;
 			targetProxy = 585B52AA194588F3000938B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -415,7 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = MyAppWriteWithSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftLab/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.${PRODUCT_NAME:rfc1034identifier}";
@@ -430,7 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = MyAppWriteWithSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftLab/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.${PRODUCT_NAME:rfc1034identifier}";
@@ -479,7 +479,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		585B5292194588F2000938B8 /* Build configuration list for PBXProject "MyAppWriteWithSwift" */ = {
+		585B5292194588F2000938B8 /* Build configuration list for PBXProject "SwiftLab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				585B52B1194588F3000938B8 /* Debug */,
@@ -488,7 +488,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		585B52B3194588F3000938B8 /* Build configuration list for PBXNativeTarget "MyAppWriteWithSwift" */ = {
+		585B52B3194588F3000938B8 /* Build configuration list for PBXNativeTarget "SwiftLab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				585B52B4194588F3000938B8 /* Debug */,
@@ -497,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		585B52B6194588F3000938B8 /* Build configuration list for PBXNativeTarget "MyAppWriteWithSwiftTests" */ = {
+		585B52B6194588F3000938B8 /* Build configuration list for PBXNativeTarget "SwiftLabTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				585B52B7194588F3000938B8 /* Debug */,
