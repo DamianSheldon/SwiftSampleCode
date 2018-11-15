@@ -21,6 +21,7 @@
 		DA296F4821590FFD00573340 /* OxygenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA296F4721590FFD00573340 /* OxygenTests.swift */; };
 		DA296F4A21590FFD00573340 /* Oxygen.h in Headers */ = {isa = PBXBuildFile; fileRef = DA296F3C21590FFD00573340 /* Oxygen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA296F582174D36200573340 /* ShallowDeepCopyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296F572174D36200573340 /* ShallowDeepCopyTests.m */; };
+		DA8C4EE0219DB305005DC224 /* TiledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C4EDF219DB305005DC224 /* TiledImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		DA296F4921590FFD00573340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA296F562174D36100573340 /* OxygenTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OxygenTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		DA296F572174D36200573340 /* ShallowDeepCopyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShallowDeepCopyTests.m; sourceTree = "<group>"; };
+		DA8C4EDF219DB305005DC224 /* TiledImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiledImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				DA296F3D21590FFD00573340 /* Info.plist */,
 				DA133158217CB4930094CDA6 /* LargeImageDownsizingOperation.swift */,
 				DA13315A217F60580094CDA6 /* LargeImageDownsizingConfiguration.swift */,
+				DA8C4EDF219DB305005DC224 /* TiledImageView.swift */,
 			);
 			path = Oxygen;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				DA13315B217F60580094CDA6 /* LargeImageDownsizingConfiguration.swift in Sources */,
 				DA133157217CB4770094CDA6 /* LargeImageDownsizingDelegate.swift in Sources */,
 				DA133159217CB4930094CDA6 /* LargeImageDownsizingOperation.swift in Sources */,
+				DA8C4EE0219DB305005DC224 /* TiledImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
