@@ -43,6 +43,8 @@ open class ImageScrollView: UIScrollView {
             
             let scaledImage = ImageHelper.scaledImage(image, factor: imageScale)
             frontTiledImageView = TiledImageView(frame: imageRect, image: scaledImage, scale: imageScale)
+            
+            addSubview(frontTiledImageView)
         }
     }
 }

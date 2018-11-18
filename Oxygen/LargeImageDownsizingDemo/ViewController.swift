@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     let operationQueue = OperationQueue()
     
+    var imageScrollView: ImageScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +38,23 @@ class ViewController: UIViewController {
             view.addConstraint(NSLayoutConstraint(item: progressView, attribute: .bottom, relatedBy: .equal, toItem: bottomLayoutGuide, attribute: .top, multiplier: 1.0, constant: 0))
         }
     }
-
+    
+    func configureConstraintsForImageScrollView() {
+        imageScrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        if #available(iOS 11.0, *) {
+            imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            imageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            imageScrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+            imageScrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        } else {
+            view.addConstraint(NSLayoutConstraint(item: imageScrollView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1.0, constant: 0))
+            view.addConstraint(NSLayoutConstraint(item: imageScrollView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: 0))
+            view.addConstraint(NSLayoutConstraint(item: imageScrollView, attribute: .top, relatedBy: .equal, toItem: topLayoutGuide, attribute: .bottom, multiplier: 1.0, constant: 0))
+            view.addConstraint(NSLayoutConstraint(item: imageScrollView, attribute: .bottom, relatedBy: .equal, toItem: bottomLayoutGuide, attribute: .top, multiplier: 1.0, constant: 0))
+        }
+    }
+    
     // MARK: View
     lazy var progressView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
@@ -63,6 +81,15 @@ extension ViewController: LargeImageDownsizingDelegate {
     
     func largeImageDownsizingOperationDidFinish(_ op: LargeImageDownsizingOperation, generatedImage: UIImage) -> Void {
         print("largeImageDownsizingOperationDidFinish\n")
+        
+        DispatchQueue.main.async {
+            self.imageScrollView = ImageScrollView(frame: self.view.bounds, image: generatedImage)
+            
+            self.view.addSubview(self.imageScrollView)
+            self.configureConstraintsForImageScrollView()
+            
+            self.progressView.removeFromSuperview()
+        }
     }
     
     func largeImageDownsizingOperation(_ op: LargeImageDownsizingOperation, failedWithError error: NSError) -> Void {
