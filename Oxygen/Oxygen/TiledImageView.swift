@@ -31,6 +31,8 @@ open class TiledImageView: UIView {
         imageRect = CGRect(x: 0, y: 0, width: image.cgImage?.width ?? 0, height: image.cgImage?.height ?? 0)
         
         super.init(frame: frame)
+        
+        configureLayer()
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -44,6 +46,8 @@ open class TiledImageView: UIView {
         imageRect = aDecoder.decodeCGRect(forKey: TiledImageView.rectKey)
         
         super.init(coder: aDecoder)
+        
+        configureLayer()
     }
     
     open override func encode(with aCoder: NSCoder) {
