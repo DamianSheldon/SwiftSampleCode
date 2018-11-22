@@ -83,20 +83,14 @@ open class TiledImageView: UIView {
         // Scale the context so that the image is rendered
         // at the correct size for the zoom level.
         
-        // Transform coordinate
-        var t = CGAffineTransform.identity
-        t = t.scaledBy(x: 1, y: -1)
-        t = t.translatedBy(x: 0, y: CGFloat(-cgImage.height))
-        
-        let coreGraphicRect = rect.applying(t)
-        
-        guard let tileImage = cgImage.cropping(to: coreGraphicRect) else {
+        guard let tileCGImage = cgImage.cropping(to: rect) else {
             context.restoreGState()
             return
         }
         
-        context.draw(tileImage, in: rect)
-        
+        let tileImage = UIImage(cgImage: tileCGImage, scale: image.scale, orientation: image.imageOrientation)
+        tileImage.draw(in: rect)
+
         context.restoreGState()
     }
     
